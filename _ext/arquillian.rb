@@ -614,9 +614,6 @@ module Awestruct::Extensions::Repository::Visitors
 
     def visit(repository, site)
       c = site.components[repository.path]
-      if not c
-	  return
-      end
       c.type = 'extension'
       c.type_name = c.type.humanize.titleize
       if site.modules[c.type].nil?
